@@ -1,0 +1,287 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="datatables.css" type="text/css" />
+         <script src="jquery.js"></script>
+<!--        <link rel="stylesheet" href="css/font-icons.css" type="text/css" />-->
+        <script src="datatables.js"></script>
+        <script src="datatables3.js"></script>
+       
+        <style>
+            
+        tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    }
+        </style>
+    </head>
+<body>
+           <h6 class="card-title">GET ALL ACCOUNT OPENING SITUATIONS
+               
+          
+             
+                <div id='account_opening_situations' class="btn-group pull-right">
+             <button id="uni_key" class="btn btn-primary btn-round" data-toggle="modal" ><span class="text">Download PDF</span> <i class="fa fa-download ml-2"></i></button>        
+             <button id="uni_key2" class="btn btn-primary btn-round naming_doc" data-toggle="modal" ><span  class="text">Download EXCEL</span> <i class="fa fa-download ml-2"></i></button>
+              <button id="acc_ctrl" class="refreshdyn btn btn-primary btn-round" data-toggle="modal" ><span class="text">Refresh</span> <i class="fa fa-refresh ml-2"></i></button> 
+                   
+              </div> 
+              </h6>
+    
+    
+<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+            </tr>
+            <tr>
+                <td>Garrett Winters</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>63</td>
+                <td>2011-07-25</td>
+                <td>$170,750</td>
+            </tr>
+            <tr>
+                <td>Ashton Cox</td>
+                <td>Junior Technical Author</td>
+                <td>San Francisco</td>
+                <td>66</td>
+                <td>2009-01-12</td>
+                <td>$86,000</td>
+            </tr>
+            <tr>
+                <td>Cedric Kelly</td>
+                <td>Senior Javascript Developer</td>
+                <td>Edinburgh</td>
+                <td>22</td>
+                <td>2012-03-29</td>
+                <td>$433,060</td>
+            </tr>
+            <tr>
+                <td>Airi Satou</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>33</td>
+                <td>2008-11-28</td>
+                <td>$162,700</td>
+            </tr>
+            <tr>
+                <td>Brielle Williamson</td>
+                <td>Integration Specialist</td>
+                <td>New York</td>
+                <td>61</td>
+                <td>2012-12-02</td>
+                <td>$372,000</td>
+            </tr>
+            <tr>
+                <td>Herrod Chandler</td>
+                <td>Sales Assistant</td>
+                <td>San Francisco</td>
+                <td>59</td>
+                <td>2012-08-06</td>
+                <td>$137,500</td>
+            </tr>
+            <tr>
+                <td>Rhona Davidson</td>
+                <td>Integration Specialist</td>
+                <td>Tokyo</td>
+                <td>55</td>
+                <td>2010-10-14</td>
+                <td>$327,900</td>
+            </tr>
+            <tr>
+                <td>Colleen Hurst</td>
+                <td>Javascript Developer</td>
+                <td>San Francisco</td>
+                <td>39</td>
+                <td>2009-09-15</td>
+                <td>$205,500</td>
+            </tr>
+            <tr>
+                <td>Sonya Frost</td>
+                <td>Software Engineer</td>
+                <td>Edinburgh</td>
+                <td>23</td>
+                <td>2008-12-13</td>
+                <td>$103,600</td>
+            </tr>
+            <tr>
+                <td>Jena Gaines</td>
+                <td>Office Manager</td>
+                <td>London</td>
+                <td>30</td>
+                <td>2008-12-19</td>
+                <td>$90,560</td>
+            </tr>
+            <tr>
+                <td>Quinn Flynn</td>
+                <td>Support Lead</td>
+                <td>Edinburgh</td>
+                <td>22</td>
+                <td>2013-03-03</td>
+                <td>$342,000</td>
+            </tr>
+            <tr>
+                <td>Charde Marshall</td>
+                <td>Regional Director</td>
+                <td>San Francisco</td>
+                <td>36</td>
+                <td>2008-10-16</td>
+                <td>$470,600</td>
+            </tr>
+            <tr>
+                <td>Haley Kennedy</td>
+                <td>Senior Marketing Designer</td>
+                <td>London</td>
+                <td>43</td>
+                <td>2012-12-18</td>
+                <td>$313,500</td>
+            </tr>
+            <tr>
+                <td>Tatyana Fitzpatrick</td>
+                <td>Regional Director</td>
+                <td>London</td>
+                <td>19</td>
+                <td>2010-03-17</td>
+                <td>$385,750</td>
+            </tr>
+            <tr>
+                <td>Michael Silva</td>
+                <td>Marketing Designer</td>
+                <td>London</td>
+                <td>66</td>
+                <td>2012-11-27</td>
+                <td>$198,500</td>
+            </tr>
+            <tr>
+                <td>Paul Byrd</td>
+                <td>Chief Financial Officer (CFO)</td>
+                <td>New York</td>
+                <td>64</td>
+                <td>2010-06-09</td>
+                <td>$725,000</td>
+            </tr>
+            <tr>
+                <td>Gloria Little</td>
+                <td>Systems Administrator</td>
+                <td>New York</td>
+                <td>59</td>
+                <td>2009-04-10</td>
+                <td>$237,500</td>
+            </tr>
+            <tr>
+                <td>Bradley Greer</td>
+                <td>Software Engineer</td>
+                <td>London</td>
+                <td>41</td>
+                <td>2012-10-13</td>
+                <td>$132,000</td>
+            </tr>
+            <tr>
+                <td>Dai Rios</td>
+                <td>Personnel Lead</td>
+                <td>Edinburgh</td>
+                <td>35</td>
+                <td>2012-09-26</td>
+                <td>$217,500</td>
+            </tr>
+            <tr>
+                <td>Jenette Caldwell</td>
+                <td>Development Lead</td>
+                <td>New York</td>
+                <td>30</td>
+                <td>2011-09-03</td>
+                <td>$345,000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot>
+    </table>
+                    <img id="scream" style="display:none"  src="small_logo.png" alt="The Scream">
+
+    </body>
+</html>
+
+<script src="downloadresources/jspdf.js"></script>
+<!--
+<script src="downloadresources/pdffont.js"></script>
+<script src="downloadresources/canvas.js"></script>
+<script src="downloadresources/jquery.base64.js"></script>
+
+<script src="downloadresources/tableExport.js"></script>
+
+-->
+<script src="downloadresources/autotable.jspdf.js"></script>
+<script src="downloadresources/tableExportNormal.js"></script>
+<script src="export_lib.js"></script>
+<!--<script src="downloadresources/tableSpecialExport.js"></script>-->
+<script>
+    var today = new Date();
+var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+      chartinfo.title='ACCOUNT_OPENING_SITUATION'
+//      report_CONF.FOOTER.START=15;
+      report_CONF.HEADER.START=0;
+      report_CONF.HEADER.STOP=14;
+//      report_CONF.FOOTER.STOP=20;
+          report_header.SUBTITLE="*** ALL ACCOUNT OPENING SITUATIONS ***";
+       report_CONF.HEADER.EXTRA_TITLE_WIDTH=290;
+       report_CONF.HEADER.SUB_TITLE_WIDTH=340;
+       report_CONF.HEADER.TITLE_WIDTH=350;
+    report_header.EXTRA_TITLE="***DATE FROM : TO: ***";
+      report_CONF.HEADER.PAGE_ORIENTATION='L';
+//      signature_footer.SIGNATORY_ONE='BENEFICIARY';
+//      signature_footer.SIGNATORY_TWO='MANAGER';
+//      signature_footer.SIGNATORY_THREE='CHAIRMAN LOAN COMM';
+//      signature_footer.SIGNATORY_FOUR='CHAIRMAN BOARD';
+   
+    
+    $(document).ready(function () {
+    // Setup - add a text input to each footer cell
+    $('#example tfoot th').each(function () {
+        var title = $(this).text();
+        $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+    });
+ 
+    // DataTable
+    var table = $('#example').DataTable({
+        initComplete: function () {
+            // Apply the search
+            this.api()
+                .columns()
+                .every(function () {
+                    var that = this;
+ 
+                    $('input', this.footer()).on('keyup change clear', function () {
+                        if (that.search() !== this.value) {
+                            that.search(this.value).draw();
+                        }
+                    });
+                });
+        },
+    });
+});
+</script>

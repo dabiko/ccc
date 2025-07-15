@@ -1,0 +1,255 @@
+@font-face {
+  font-family: SourceSansPro;
+  src: url(SourceSansPro-Regular.ttf) format('ttf');
+}
+
+
+/*
+
+.clearfixer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a.linkers {
+  color: #0087C3;
+  text-decoration: none;
+}
+*/
+
+/*
+body.printer {
+  position: relative;
+  width: 21cm;  
+  height: 29.7cm; 
+  margin: 0 auto; 
+  color: #555555;
+  background: #FFFFFF; 
+  font-family: Arial, sans-serif; 
+  font-size: 14px; 
+  font-family: SourceSansPro;
+}
+*/
+
+/*
+header.clearfixer {
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #AAAAAA;
+}
+
+#logogo {
+  float: left;
+  margin-top: 8px;
+}
+
+#logogo img {
+  height: 70px;
+}
+
+#company {
+  float: right;
+  text-align: right;
+    margin: 0  30px 10px 0;
+}
+
+
+#details {
+  margin-bottom: 50px;
+}
+
+#clienter {
+  padding-left: 6px;
+  border-left: 6px solid #0087C3;
+  float: left;
+}
+
+#clienter .to {
+  color: #777777;
+}
+
+h2.namer {
+  font-size: 1.4em;
+  font-weight: normal;
+  margin: 0;
+}
+
+#invoice {
+  float: right;
+  text-align: right;
+    margin: 0  30px 10px 0;
+}
+
+#invoice h1 {
+  color: #0087C3;
+  font-size: 2.4em;
+  line-height: 1em;
+  font-weight: normal;
+  
+}
+
+#invoice .date {
+  font-size: 1.1em;
+  color: #777777;
+}
+*/
+.avoid {
+        page-break-inside: avoid;
+      }
+table.printable {
+  font-family: SourceSansPro;
+/*  width:100%;*/
+/*  border-collapse: collapse;*/
+  border-spacing: 0;
+/*
+  margin-bottom: 20px;
+  margin-left:60px;
+*/
+}
+
+.printable th,
+.printable td {
+    font-family: SourceSansPro;
+  padding: 3px;
+  background: #EEEEEE;
+  text-align: center;
+/*  border: 1px solid #304C8D;*/
+  border: 0.5px solid #47484B;
+/*  width:5%;*/
+}
+
+.printable th {
+/*  white-space: nowrap;        */
+  font-weight: normal;
+}
+
+
+.printable td {
+  text-align: left;
+  
+}
+
+.printable td h3{
+  color:#2C488B;
+  font-size: 1.2em;
+  font-weight: normal;
+  margin: 0 0 0.2em 0;
+}
+
+.printable .no {
+  color: #FFFFFF;
+  font-size: 1.3em;
+    background:#304C8D;
+/*  background:#FF6E4A ;*/
+}
+
+.printable .desc {
+  text-align: left;
+    font-size: 1.14em;
+}
+
+.printable .unit {
+     color: #FFFFFF;
+/*  background: #FEE8D6 ;*/
+  background:#B0C4DE;
+}
+
+.printable .qty {
+}
+
+.printable .total {
+  background: #57B223;
+  color: #FFFFFF;
+}
+
+.printable td.unit,
+.printable td.qty,
+.printable td.total {
+  font-size: 1.17em;
+}
+
+.printable tbody tr:last-child td {
+/*  border: none;*/
+}
+
+.printable tfoot td {
+/*  padding: 15px 10px;*/
+  background: #FFFFFF;
+  border-bottom: 1px solid #AAAAAA; 
+  border-left:none;
+  border-right:none; 
+  font-size: 1.1em;
+ height: 60px;
+/*  border-top: 1px solid #AAAAAA; */
+    
+}
+
+
+
+
+
+.printable tfoot tr td:first-child {
+/*  border-bottom: 1px solid #AAAAAA; */
+/*      border-left:1px solid #AAAAAA;*/
+/*    border-right:1px solid #AAAAAA;*/
+     border-top:none;
+}
+.printable tfoot tr:last-child td:first-child {
+  color: #FF6600;
+  font-size: 1.1em;
+  border-bottom: 1px solid #FF6600; 
+/* border-right:1px solid #FF6600; */
+}
+
+.printable tfoot tr:last-child td {
+  border-bottom: 1px solid #FF6600; 
+}
+
+/*
+#thanks{
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+
+#notices{
+  padding-left: 6px;
+  border-left: 6px solid #0087C3;  
+}
+
+#notices .notice {
+  font-size: 1.2em;
+}
+*/
+
+/*
+footer.printfoot {
+  color: #777777;
+  width: 100%;
+  height: 20px;
+  position: relative;
+  bottom: 0;
+  margin-top:150px;
+  border-top: 1px solid #AAAAAA;
+  padding: 8px 0;
+  text-align: center;
+}
+*/
+
+tr.print_header {
+border-left: 10px solid #304C8D ;
+/*border-right: 10px solid #FF6600 ;*/
+  height: 40px;
+  background:#B0C4DE;  
+}
+
+.print_header > td {
+  white-space: nowrap;        
+  font-weight: normal;
+    font-size:1.3em;
+    text-align: left;
+ background:#B0C4DE; 
+    color:white;
+}
+
+

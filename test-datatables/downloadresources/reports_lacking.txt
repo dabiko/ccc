@@ -1,0 +1,38 @@
+---------marketing---------
+
+gender accounts reports
+
+
+
+
+
+
+
+----------ATM-------------
+
+atm transactions for branch with their different dates as input.
+
+Potential clients for Bank card and their transaction rates.
+
+Group ATM cards according to client profiles and find most popular profiles to market.
+
+create reports for subscription income growth.
+
+create reports for transaction income growth.
+
+
+
+
+
+-----CREDIT------------
+
+Potential clients for credit offers
+group credit according to their profiles
+analyse credit according to their customer profiles and find simalirities
+
+
+
+
+
+--------SMS------------
+Potential clients for sms and theri transaction rates
