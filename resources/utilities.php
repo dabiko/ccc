@@ -52,8 +52,7 @@ class QueryControllers{
    public function InsertData($table, $column_name, $values){
       // global $user_id;
         $errorMessage;
-            $adb = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
-
+           $adb = Database::connect();
         //build the columns and loop through the column(s) given
         $buildColumns = '';
         if (is_array($column_name)) {
@@ -145,8 +144,8 @@ class QueryControllers{
      */
 
     public function SelectData($column_name,$table,$condition){
-       
-        $adb = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
+
+        $adb = Database::connect();
 
         //build the columns and loop through the column(s) given
         $buildSelect = '';
@@ -202,7 +201,8 @@ class QueryControllers{
      * @return true if successful and false (with errors) in case of any failure
      */
    public function UpdateData($table, $column_name, $values,$where){
-        $adb = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
+
+       $adb = Database::connect();
 
         //build the field to value correlation (Establishing connection between two or more Variables.)
         $buildUpdate = '';
@@ -293,7 +293,7 @@ class QueryControllers{
             $buildValues .= ':value';
         }
 
-     $adb = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
+        $adb = Database::connect();
      $DeleteQuery =" DELETE FROM ".$table." WHERE ".$buildColumns." = $buildValues ";
      $statement = $adb->prepare($DeleteQuery);
 
@@ -322,9 +322,8 @@ class QueryControllers{
 //.........................multiple delete update    
  public function DeleteMData($table,  $condition){
 
+     $adb = Database::connect();
 
-       
-     $adb = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
      $DeleteQuery =" DELETE FROM ".$table." WHERE ".$condition." ";
      $statement = $adb->prepare($DeleteQuery);
 
@@ -342,20 +341,7 @@ class QueryControllers{
         }
         return false;
 
-    }   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    }
 
     /**
      * @param $table, to get the total number of rows.
@@ -402,7 +388,8 @@ class QueryControllers{
             $buildValues .= ':value';
         }
 
-        $adb = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
+        $adb = Database::connect();
+
         $columnQuery =" SELECT * FROM ".$table." WHERE ".$buildColumns." = $buildValues ";
         $statement = $adb->prepare($columnQuery);
         //execute the Query
@@ -514,8 +501,6 @@ class QueryControllers{
 
     function isCookieValid($adb){
 
-
-
         //setting the cookie to false by default
         $isValid = false;
 
@@ -559,8 +544,6 @@ class QueryControllers{
 
     function iscusCookieValid($adb){
 
-
-
         //setting the cookie to false by default
         $isValid = false;
 
@@ -575,7 +558,7 @@ class QueryControllers{
             /**
              * check if id retrieved from the cookie exits in the database
              */
-            $adb = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
+            $adb = Database::connect();
             $sqlQuery = "SELECT * FROM customer_credentials WHERE customer_id = :user_id";
             $statement = $adb->prepare($sqlQuery);
             $statement->execute([':user_id' => $userID]);
@@ -798,7 +781,9 @@ function password_auth($password,$password2){
     public function checkDuplicateEmails($value, $adb){
 
         try {
-            $adb = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
+
+            $adb = Database::connect();
+
             $sqlQuery = "SELECT email FROM users WHERE  email=:email";
             $statement = $adb->prepare($sqlQuery);
             $statement->execute(array(':email' => $value));
@@ -815,7 +800,8 @@ function password_auth($password,$password2){
     public function checkDuplicateValues($value,$column,$table, $adb){
 
         try {
-            $adb = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
+
+            $adb = Database::connect();
             $sqlQuery = "SELECT ".$column." FROM ".$table." WHERE  ".$column."=:email";
             $statement = $adb->prepare($sqlQuery);
             $statement->execute(array(':email' => $value));
@@ -830,7 +816,9 @@ function password_auth($password,$password2){
         return false;
     }
   function checkDuplicateUserNames($value){
-        $adb = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
+
+           $adb = Database::connect();
+
         try {
             $sqlQuery = "SELECT username FROM users WHERE  username=:username";
             $statement = $adb->prepare($sqlQuery);
@@ -850,7 +838,9 @@ function password_auth($password,$password2){
     }
     
 function checkDuplicateUserNamesUpdate($value,$uid){
-        $adb = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
+
+           $adb = Database::connect();
+
         try {
             $sqlQuery = "SELECT username FROM users WHERE  username=:username and user_id=:user_id ";
             $statement = $adb->prepare($sqlQuery);
@@ -986,11 +976,11 @@ $encpass = $new_security->encryptor($password);
         //values as Array
 
        // $values[] ="";
-        $values[] = filter_var($email,FILTER_SANITIZE_STRING);
-        $values[] = filter_var($name,FILTER_SANITIZE_STRING);
+        $values[] = filter_var($email,FILTER_SANITIZE_EMAIL);
+        $values[] = filter_var($name,FILTER_SANITIZE_SPECIAL_CHARS);
         $values[] = 1;
         $values[] = 0;
-        $values[] = filter_var($phone,FILTER_SANITIZE_STRING);
+        $values[] = filter_var($phone,FILTER_SANITIZE_NUMBER_INT);
         $values[] = 0;
         $values[] = $encpass;
         date_default_timezone_set('Africa/Douala');

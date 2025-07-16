@@ -17,7 +17,7 @@ function loginForm(){
 
 
 
-    var formdata = new FormData();
+    let formdata = new FormData();
     formdata.append( "username", _("username").value );
     formdata.append( "password", _("password").value );
 //    alert( _("username").value+""+ _("password").value);
@@ -29,7 +29,7 @@ function loginForm(){
 //        formdata.append('remember',noRemMe);
 //    }
 
-    var ajax = new XMLHttpRequest();
+    let ajax = new XMLHttpRequest();
 
     ajax.open( "POST","auth_login",true);
     ajax.onreadystatechange = function() {
@@ -117,7 +117,7 @@ function logincustomerForm(){
 
 
 
-    var formdata = new FormData();
+    let formdata = new FormData();
     formdata.append( "username", _("username").value );
     formdata.append( "password", _("password").value );
 //    alert( _("username").value+""+ _("password").value);
@@ -129,7 +129,7 @@ function logincustomerForm(){
 //        formdata.append('remember',noRemMe);
 //    }
 
-    var ajax = new XMLHttpRequest();
+    let ajax = new XMLHttpRequest();
 
     ajax.open( "POST","customer_login",true);
     ajax.onreadystatechange = function() {

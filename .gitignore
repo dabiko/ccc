@@ -1,0 +1,18 @@
+### CakePHP3 template
+# CakePHP 3
+
+/config/app.php
+/config/.env
+/logs/*
+/tmp/*
+/vendor/*
+
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+.env
+out
+gen

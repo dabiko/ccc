@@ -22,8 +22,8 @@ if (empty($_POST["token_id"])) {
 
 
 //echo $condition.", ".$message.", ".$video.", ".$holder;
-if( $errorMSG ==''){
-    //fill the require fields
+if( $errorMSG == ''){
+    //fill the requirement fields
     $fields[] = "cat_id";
     $fields[] = "cat_name";
     $fields[] = "Date_Created";

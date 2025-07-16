@@ -32,7 +32,7 @@
       <phpcs_by_interpreter asDefaultInterpreter="true" interpreter_id="32e6d803-91bd-405b-8313-3f55def80cfc" timeout="30000" />
     </phpcs_settings>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.0">
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.4">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
   <component name="PhpStan">

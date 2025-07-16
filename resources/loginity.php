@@ -1,6 +1,7 @@
 <?php
 require_once('utilities.php');
-function auth_check(){
+function auth_check(): void
+{
     $adb=1;
 $RunQuery = new QueryControllers();
 if (isset($_SESSION['ccc_username']) || isset($_SESSION['ccc_id']) || $RunQuery->isCookieValid($adb)) {
@@ -11,7 +12,8 @@ if (isset($_SESSION['ccc_username']) || isset($_SESSION['ccc_id']) || $RunQuery-
 }
 }
 
-function auth_check_login(){
+function auth_check_login(): void
+{
  $adb=1;
 ob_start();  ob_end_clean();
 $RunQuery = new QueryControllers();
@@ -37,7 +39,8 @@ if (isset($_SESSION['ccc_cususername']) || isset($_SESSION['ccc_cusid']) || $Run
 }
 }
 
-function auth_cuscheck_login(){
+function auth_cuscheck_login(): void
+{
  $adb=1;
 ob_start();  ob_end_clean();
 $RunQuery = new QueryControllers();

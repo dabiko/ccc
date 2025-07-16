@@ -1,31 +1,59 @@
 <?php
-define('DB_DSN', 'mysql:host=localhost;port=3306; dbname=ccc-web');
-define('DB_USER', 'root');
-define('DB_PASSWORD', '');
+declare(strict_types=1);
 
+require_once __DIR__ . '/../vendor/autoload.php'; // Load Composer packages
 
-try{
-//create an instance of the PDO class with the required paramters
-    $adb = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
+use Dotenv\Dotenv;
 
-//set PDO error mode to exception
-    $adb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $adb->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-    $adb->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+final class DBConfig
+{
+    public readonly string $dsn;
+    public readonly string $user;
+    public readonly string $password;
 
-//display success message
-  //  echo "Connected Successfully".'<br>';
+    public function __construct()
+    {
+        // Load .env variables
+        $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+        $dotenv->load();
 
-}catch(PDOException $ex) {
+        echo $host     = $_ENV['DB_HOST'] ?? 'localhost';
+        $port     = $_ENV['DB_PORT'] ?? '3306';
+        $dbname   = $_ENV['DB_NAME'] ?? 'ccc-web';
+        $this->user     = $_ENV['DB_USER'] ?? 'root';
+        $this->password = $_ENV['DB_PASSWORD'] ?? '';
 
-//display error message
-    echo "Connection to database Failed" . $ex->getMessage();
-
-    //$adb = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
-     //echo "Connected Successfully".'<br>';
+        $this->dsn = "mysql:host={$host};port={$port};dbname={$dbname};charset=utf8mb4";
+    }
 }
 
+final class Database
+{
+    private static ?PDO $connection = null;
 
+    public static function connect(): PDO
+    {
+        if (self::$connection !== null) {
+            return self::$connection;
+        }
 
-?>
+        $config = new DBConfig();
 
+        try {
+            self::$connection = new PDO($config->dsn, $config->user, $config->password, [
+                PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
+                PDO::ATTR_EMULATE_PREPARES   => false,
+                PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci'
+            ]);
+
+            error_log("✅ Database connection successful.");
+            return self::$connection;
+
+        } catch (PDOException $e) {
+            error_log("❌ PDO Error: " . $e->getMessage());
+            http_response_code(500);
+            exit("An internal error occurred. Please try again later.");
+        }
+    }
+}
