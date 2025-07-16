@@ -12,7 +12,7 @@ require_once 'header.php';
    
 <ol class="breadcrumb">
 <li class="breadcrumb-item"><a href="index">Home</a></li>
-<li class="breadcrumb-item" ><a href="main_menu/network.php">Branches</a></li>
+<li class="breadcrumb-item" ><a href="network.php">Branches</a></li>
 <li class="breadcrumb-item active" aria-current="page">North-West</li>
 </ol>
 </div>

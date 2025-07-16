@@ -17,7 +17,7 @@ final class DBConfig
         $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
         $dotenv->load();
 
-        echo $host     = $_ENV['DB_HOST'] ?? 'localhost';
+        $host     = $_ENV['DB_HOST'] ?? 'localhost';
         $port     = $_ENV['DB_PORT'] ?? '3306';
         $dbname   = $_ENV['DB_NAME'] ?? 'ccc-web';
         $this->user     = $_ENV['DB_USER'] ?? 'root';

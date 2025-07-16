@@ -8,7 +8,7 @@ require_once 'header.php';
 <h1>ABOUT US</h1>
 <span>Get more insight on CCC PLC</span>
 <ol class="breadcrumb">
-<li class="breadcrumb-item"><a href="../index.php">Home</a></li>
+<li class="breadcrumb-item"><a href="index.php">Home</a></li>
 <li class="breadcrumb-item active" aria-current="page">About Us</li>
 </ol>
 </div>

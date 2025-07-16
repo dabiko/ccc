@@ -93,4 +93,4 @@ require_once 'header.php';
 require_once 'footer.php';
 ?>
 <script src="https://maps.google.com/maps/api/js?key=AIzaSyBdGvcnka2RYSR3CePUK17rXI5slzdxlFc"></script>
-<script src="../js/jquery.gmap.js"></script>
+<script src="js/jquery.gmap.js"></script>

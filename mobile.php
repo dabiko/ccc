@@ -92,7 +92,7 @@ require_once 'header.php';
 </ul>
 </div>
 <div class="pricing-action">
-<a href="main_menu/contact.php" class="btn btn-danger btn-block btn-lg bgcolor border-color">CONTACT US</a>
+<a href="contact.php" class="btn btn-danger btn-block btn-lg bgcolor border-color">CONTACT US</a>
 </div>
 </div>
 </div>

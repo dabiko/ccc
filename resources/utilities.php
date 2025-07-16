@@ -7,6 +7,7 @@
  */
 require_once 'Database.php';
 require_once 'encrypt.php';
+
 session_start();
 class convertToAgo{
     public function convert_datetime($str){
@@ -1002,7 +1003,7 @@ if($uservalidity==false && $uservalidity2==false){
 }
         else{
             
-            die('sorry, username or email already exist');
+           die('sorry, username or email already exist');
         }
 
        

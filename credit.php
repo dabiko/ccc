@@ -11,7 +11,7 @@ require_once 'header.php';
 <span> utility Loans, Line of Credit, Business Loans, School Fee Loans</span>
 <ol class="breadcrumb">
 <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-<li class="breadcrumb-item"><a href="main_menu/services.php">Services</a></li>
+<li class="breadcrumb-item"><a href="services.php">Services</a></li>
 <li class="breadcrumb-item active" aria-current="page.php">Credit</li>
 </ol>
 </div>

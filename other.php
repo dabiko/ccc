@@ -11,7 +11,7 @@ require_once 'header.php';
 <span> international Money Transfer via Western Union.</span>
 <ol class="breadcrumb">
 <li class="breadcrumb-item"><a href="index">Home</a></li>
-<li class="breadcrumb-item"><a href="main_menu/services.php">Services</a></li>
+<li class="breadcrumb-item"><a href="services.php">Services</a></li>
 <li class="breadcrumb-item active" aria-current="page">Other Services</li>
 </ol>
 </div>
@@ -89,7 +89,7 @@ require_once 'header.php';
 </ul>
 </div>
 <div class="pricing-action">
-<a href="main_menu/contact.php" class="btn btn-danger btn-block btn-lg bgcolor border-color">CONTACT US</a>
+<a href="contact.php" class="btn btn-danger btn-block btn-lg bgcolor border-color">CONTACT US</a>
 </div>
 </div>
 </div>

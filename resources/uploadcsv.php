@@ -37,7 +37,7 @@ if(!empty($cv)){
    $values[] =$csv[3];
    $values[] = date('Y-m-d H:i:s',STRTOTIME(date('h:i:sa')));
     
-$InsertQuery = $RunQuery->InsertData('card_transfers',$columns,$values)     
+$InsertQuery = $RunQuery->InsertData('card_transfers',$columns,$values);
  }
     if ($InsertQuery ===true){
     $errorMSG= "YOUR CARDS WERE UPLOADED  SUCCESSFULLY";

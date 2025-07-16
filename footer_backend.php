@@ -154,17 +154,17 @@ else{
 <ul>
 <li class="current"><a href="index"><div>Home</div></a>
 </li>
-<li><a href="main_menu/aboutus.php"><div>About Us</div></a>
+<li><a href="aboutus.php"><div>About Us</div></a>
 <ul>
-    <li><a href="main_menu/aboutus.php#vision"><div>Our Vision</div></a></li>
-<li><a href="main_menu/aboutus.php#mission"><div>Our Mission</div></a></li>
-    <li><a href="main_menu/aboutus.php#strength"><div>Our Strength</div></a></li>
-<li><a href="main_menu/aboutus.php#team"><div>Management Team</div></a></li>
-<li><a href="main_menu/aboutus.php#antimoney"><div>Anti-Money Laundering Policies</div></a></li>
-<li><a href="main_menu/aboutus.php#keyfigures"><div>Key Figures</div></a></li>
+    <li><a href="aboutus.php#vision"><div>Our Vision</div></a></li>
+<li><a href="aboutus.php#mission"><div>Our Mission</div></a></li>
+    <li><a href="aboutus.php#strength"><div>Our Strength</div></a></li>
+<li><a href="aboutus.php#team"><div>Management Team</div></a></li>
+<li><a href="aboutus.php#antimoney"><div>Anti-Money Laundering Policies</div></a></li>
+<li><a href="aboutus.php#keyfigures"><div>Key Figures</div></a></li>
 </ul>
 </li>
-<li><a href="main_menu/services.php"><div>Products and Services</div></a>
+<li><a href="services.php"><div>Products and Services</div></a>
 <ul>
 <li><a href="savings.php"><div>Savings Account</div></a></li>
 <li><a href="current.php"><div>Current Account</div></a></li>
@@ -176,7 +176,7 @@ else{
 <li><a href="other.php"><div>Other Services</div></a></li>
 </ul>
 </li>
-<li><a href="main_menu/network.php"><div>Our Network</div></a>
+<li><a href="network.php"><div>Our Network</div></a>
 <ul>
 <li><a href="nw.php"><div>North-West</div></a></li>
 <li><a href="sw.php"><div>South-West</div></a></li>
@@ -187,13 +187,13 @@ else{
 <li><a href="north.php"><div>North</div></a></li>
 </ul>
 </li>
-<li><a href="main_menu/career.php"><div>Career</div></a>
+<li><a href="career.php"><div>Career</div></a>
 <ul>
-<li><a href="main_menu/career.php"><div>Job Description and Specialities</div></a></li>
+<li><a href="career.php"><div>Job Description and Specialities</div></a></li>
 <li><a href="cv.php"><div>Send us your CV</div></a></li>
 </ul>
 </li>
-<li><a href="main_menu/contact.php"><div>Contact Us</div></a></li>
+<li><a href="contact.php"><div>Contact Us</div></a></li>
 
 
 </ul>

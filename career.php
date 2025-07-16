@@ -397,6 +397,6 @@ require_once 'header.php';
 <?php
 require_once 'footer.php';
 ?>
-<script src="../js/components/bs-filestyle.js"></script>
-<script src="../js/customise/function.js"></script>
-<script src="../resources/cv_utilities.js"></script>
+<script src="js/components/bs-filestyle.js"></script>
+<script src="js/customise/function.js"></script>
+<script src="resources/cv_utilities.js"></script>
